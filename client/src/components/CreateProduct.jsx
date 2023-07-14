@@ -20,7 +20,8 @@ const CreateProduct = ({allProducts, setAllProducts}) => {
             .then(
                 res => {
                     console.log(res.data);
-                    setAllProducts([...allProducts, res.data.products])
+                    setAllProducts([...allProducts, res.data.products]);
+                    console.log(allProducts);
                     navigate("/");
                 }
             )

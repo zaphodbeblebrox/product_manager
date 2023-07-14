@@ -5,6 +5,7 @@ import axios from "axios";
 import Header from './components/Header';
 import CreateProduct from './components/CreateProduct';
 import DisplayAllProducts from './components/DisplayAllProducts';
+import DisplayOneProduct from './components/DisplayOneProduct';
 
 function App() {
   const [allProducts, setAllProducts] = useState([])
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<DisplayAllProducts allProducts={allProducts}/>}/>
         <Route path="/create/product" element={<CreateProduct allProducts={allProducts} setAllProducts={setAllProducts}/>} />
+        <Route path="/product/:id" element={<DisplayOneProduct allProducts={allProducts}/>}/>
       </Routes>
     </div>
     </BrowserRouter>

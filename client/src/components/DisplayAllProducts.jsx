@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const DisplayAllProducts = ({allProducts}) => {
     // Display a list of all pets
-    console.log(allProducts);
+    // console.log(allProducts);
 
     return(
         <div>
@@ -20,7 +20,7 @@ const DisplayAllProducts = ({allProducts}) => {
                     { allProducts.map((product) => {
                         return (
                             <tr key={product._id}>
-                                <td>{product.title}</td>
+                                <td><Link to={`/product/${product._id}`}>{product.title}</Link></td>
                                 <td>{product.price}</td>
                                 <td>{product.description}</td>
                             </tr>
